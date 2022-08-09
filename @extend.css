@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,300&display=swap');
+
+$mainFont: 'Open Sans', sans-serif;
+$lipadding: 10px 15px;
+$lidisplay: inline-block;
+$marginNum: 70;
+
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  background:red;
+  ul{
+    padding:0;
+    margin:0;
+  li{
+    font-family:$mainFont;
+    display:$lidisplay;
+    padding: 10px 15px;
+    list-style:none;
+    }
+  }
+}
+.container{
+  width: 50 * 15 + px;
+  margin: 0 auto;
+  &:after{
+    clear:both;
+    content:"";
+    display:table;
+  }
+}
+article{
+  width:1000px / 1200px * 100%;
+  display: inline-block;
+  float: left;
+}
+aside{
+  width: 200px / 1200px * 100%;
+  display: inline-block;
+  padding: 20px / 1200px * 100%;
+  img{
+   width: 100%;
+  }
+}
+.submenu{
+  &.blue{
+    background:blue;
+  }
+  &.nav li{
+    padding:$lipadding;
+    font-family:$mainFont;
+    list-style:none;
+    display:$lidisplay;
+    margin-bottom:$marginNum + px;
+  }
+  &.sky ul{
+    padding:0;
+  }
+  &:hover{
+    background:yellow;
+  }
+}
+
+.btn{
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  display:inline-block;
+}
+.primary{
+  @extend .btn;
+  background:blue;
+}
+.danger{
+  @extend .btn;
+  background:green;
+}
+.success{
+  @extend .btn;
+  background:yellow;
+}
+.warning{
+  @extend .btn;
+  background:red;
+}

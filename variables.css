@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,300&display=swap');
+
+$mainFont: 'Open Sans', sans-serif;
+$lipadding: 10px 15px;
+$lidisplay: inline-block;
+$marginNum: 70;
+
+
+.header{
+  background:red;
+  ul{
+    padding:0;
+    margin:0;
+  li{
+    font-family:$mainFont;
+    display:$lidisplay;
+    padding: 10px 15px;
+    list-style:none;
+    }
+  }
+}
+
+.submenu{
+  &.blue{
+    background:blue;
+  }
+  &.nav li{
+    padding:$lipadding;
+    font-family:$mainFont;
+    list-style:none;
+    display:$lidisplay;
+    margin-bottom:$marginNum + px;
+  }
+  &.sky ul{
+    padding:0;
+  }
+  &:hover{
+    background:yellow;
+  }
+}
